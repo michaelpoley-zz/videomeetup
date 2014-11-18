@@ -10,14 +10,19 @@ $(document).ready(function(){
 		//Fade In learn more info on button click
 		$('.btn').click(function(){
 			if( $(this).attr('id') === 'btn-lm-primary' ){
-				$('#lm-primary').fadeIn();
-				$('#lm-secondary, #lm-tertiary').fadeOut();
+				$('#lm-primary').fadeTo(100, 1, function(){
+					$('#lm-secondary, #lm-tertiary').hide();
+				});
+
 			}else if( $(this).attr('id') === 'btn-lm-secondary' ){
-				$('#lm-secondary').fadeIn();
-				$('#lm-primary, #lm-tertiary').fadeOut();
+				$('#lm-secondary').fadeTo(100, 1, function(){
+					$('#lm-primary, #lm-tertiary').fadeOut();
+				});
+
 			}else if ( $(this).attr('id') === 'btn-lm-tertiary' ){
-				$('#lm-tertiary').fadeIn();
+				$('#lm-tertiary').fadeTo(100, 1, function(){
 				$('#lm-primary, #lm-secondary').fadeOut();
+			});
 			}
 		});
 	}
