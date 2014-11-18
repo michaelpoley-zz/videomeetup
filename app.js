@@ -1,12 +1,13 @@
 $(document).ready(function(){
 
-	//Hide info for learn more links
-	$('#lm-primary').hide();
-	$('#lm-secondary').hide();
-	$('#lm-tertiary').hide();
-
 	//Fade in learn more content
 	var lmFadeIn = function(){
+		//Hide learn more info
+		$('#lm-primary').hide();
+		$('#lm-secondary').hide();
+		$('#lm-tertiary').hide();
+
+		//Fade In learn more info on button click
 		$('.btn').click(function(){
 			if( $(this).attr('id') === 'btn-lm-primary' ){
 				$('#lm-primary').fadeIn();
