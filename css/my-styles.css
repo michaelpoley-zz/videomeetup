@@ -4,5 +4,9 @@
 }
 
 #learn-more-expanded{
-	height: 100%;
+	margin: 1% auto;
+}
+
+#about{
+	margin-top: 10%;
 }
